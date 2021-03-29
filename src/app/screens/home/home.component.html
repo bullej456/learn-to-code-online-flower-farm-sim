@@ -1,0 +1,40 @@
+<div id="grid">
+    <mat-card class="mat-elevation-z8 box" id="variables">
+        <mat-card-title>Variables</mat-card-title>
+        <div id="variable" *ngFor="let v of variables">
+            <mat-icon>{{v.icon}}</mat-icon>
+            <p>{{v.value.toFixed(2)}}</p>
+        </div>
+    </mat-card>
+    <mat-card class="mat-elevation-z8 box" id="plants">
+        <mat-card-title>Plants</mat-card-title>
+        <div id="plant" #flower *ngFor="let p of plants">
+            <p style="color: orange">{{p.getStage()}}</p>
+            <p style="color:blue">{{p.getWaterLevel()}}</p>
+        </div>
+    </mat-card>
+    <mat-card class="mat-elevation-z8 box" id="objects">
+        <mat-card-title>Objects</mat-card-title>
+        <!-- <button mat-raised-button color=primary id="variable" (click)="updateMethods(o.value)" *ngFor="let o of objects">{{o.name}}</button> -->
+        <div id="oGrid">
+            <mat-button-toggle-group [vertical]="true" id="vGroup" name="fontStyle" aria-label="Font Style" [value]="objects[0].name">
+                <mat-button-toggle color=primary (click)="updateMethods(o.value)" value="{{o.name}}" *ngFor="let o of objects">{{o.name}}</mat-button-toggle>
+            </mat-button-toggle-group>
+            <div id="objectMethods">
+                <p *ngFor="let m of methodListFinal">{{m}}</p>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card class="mat-elevation-z8 box" id="inputs">
+        <mat-card-title>Inputs</mat-card-title>
+        <div id="codeArea">
+            <textarea (keydown)="triggerFunction($event, code.value)" autofocus [spellcheck]="false" rows="8" #code></textarea>
+            <br>
+            <button mat-raised-button color=primary (click)="submitCode(code.value)">Submit</button>
+            <p id="errorMessage">Error: {{error}}</p>
+        </div>
+    </mat-card>
+    <mat-card class="mat-elevation-z8 box" id="notifications">
+        <mat-card-title>Notifications</mat-card-title>
+    </mat-card>
+</div>

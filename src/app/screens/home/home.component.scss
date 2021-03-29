@@ -1,0 +1,93 @@
+#grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    grid-gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+mat-card-title {
+    margin-bottom: 1rem;
+}
+
+#variables {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+#objects {
+    grid-area: 2 / 1 / span 3 / span 1;
+}
+
+#plants {
+    grid-area: 1 / 2 / span 2 / span 1;
+}
+
+#inputs {
+    grid-area: 3 / 2 / span 1 / span 1;
+}
+
+#notifications {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+button {
+    margin-right: 0.5rem;
+}
+
+.box {
+    margin: 0rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+#variable {
+    padding-left: 1.5rem;
+    width: fit-content;
+    display: inline-block;
+}
+
+textarea {
+    height: 100%;
+    width: 80%;
+}
+
+#codeArea {
+
+}
+
+#errorMessage {
+    margin: 0.5rem;
+}
+
+#plant p {
+    margin: 0rem;
+}
+
+#plant {
+    width: fit-content;
+    display: inline-block;
+    padding: 0.5rem;
+    border-style: solid;
+    border-color: black;
+    margin: 0.25rem;
+    background-color: lightgrey;
+}
+
+#objectMethods {
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    grid-column: 2 / span 1;
+}
+
+#oGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#vGroup {
+    grid-column: 1 / span 1;
+}
+

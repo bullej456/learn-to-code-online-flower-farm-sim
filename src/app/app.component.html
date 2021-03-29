@@ -1,0 +1,11 @@
+<mat-sidenav-container class="example-container"  style="height: 100%">
+    <mat-sidenav mode="side" closed>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>
+        <mat-card class="mat-elevation-z8" id="nav">
+            <button mat-raised-button color="accent" [routerLink]="'home'">home</button>
+        </mat-card>
+        <div id="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
